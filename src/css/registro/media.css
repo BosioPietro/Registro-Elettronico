@@ -1,0 +1,389 @@
+
+
+
+@media screen and (max-aspect-ratio: 2.5/2){
+    .barraLaterale #btnMenu{
+        margin-bottom: 2rem;
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .barraLaterale > div{
+        width: 0;
+        overflow: hidden;
+    }
+
+    .barraLaterale{
+        position: absolute;
+        height: 100%;
+        background: #fafbffab;
+        backdrop-filter: blur(7.7px);
+        -webkit-backdrop-filter: blur(7.7px);
+        padding-right: 2rem;
+        border-radius: 1rem;
+        padding-inline: 1rem;
+    }
+
+    #cntLogin #contRegistro{
+       margin-left: 6rem;
+    }
+
+    .barraLaterale > div{
+        filter: drop-shadow(0px 0rem .5rem #6c8cff55);
+    }
+
+    #cntLogin{
+        width: 95vw;
+        height: 95vh;
+    }
+
+    #contOpzioni .user{
+        display: flex;
+    }
+
+    #contTitolo .user{
+        display: none;
+    }
+
+    #tabellaVoti, #contTabellaAssenze{
+        height: 38rem;
+    }
+}
+
+@media screen and (max-aspect-ratio: 1.9/2){
+
+    .contCompiti{
+        width: 100%;
+        flex-direction: row;
+        justify-content: left;
+        height: 11rem !important;
+    }
+
+    .compito{
+        width: fit-content !important;
+        height: fit-content !important;
+    }
+
+    .compito > div{
+        width: fit-content !important;
+        padding: 1rem !important;
+    }
+
+    #contCompitiProgramma{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        height: 40rem;
+    }
+
+    .compito > div > div:first-of-type{
+        gap: 1rem !important;
+    }
+
+    #divHome{
+        padding-top: 1rem;
+    }
+
+    .calendario{
+        padding: 1rem !important;
+    }
+
+    #contRegistro{
+        padding: 1rem 1rem 1rem 0;
+    }
+
+    .cellaData{
+        min-width: 12ch;
+        width: 12ch;
+    }
+
+    #contArgomenti::before{
+        left: calc(12ch + 1rem);
+    }
+
+    #contCompitiProgramma{
+        height: fit-content;
+    }
+
+    #divHome > div.flex-col{
+        overflow-y: visible !important;
+        width: 100%;
+    }
+
+    .contVoti{
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .carta{
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    #contTabellaVoti{
+        height: 40rem;
+        overflow-y: auto;
+        padding-right: .5rem;
+    }
+
+    #tabellaVoti{
+        height: auto;
+    }
+
+    #docenteValutazioni  #selectClassi{
+        width: 15rem;
+    }
+
+    .cellaTitolo{
+        width: 100%;
+        margin-bottom: .25rem;
+    }
+
+    .votoTabella{
+        margin-bottom: .5rem;
+    }
+
+    .cellaData{
+        width: 100%;
+        padding-block: 1rem;
+        position: relative;
+    }
+
+    .cellaData:not(#contArgomenti > div:nth-child(1) > div.cellaData.flex-col)::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(90deg, #fafbff, #00000052 10%, #00000052 90%, #fafbff);
+        top: 0;
+    }
+
+    .rigaArgomenti{
+        flex-direction: column;
+    }
+
+    #contArgomenti::before{
+        display: none;
+    }
+
+    .rigaArgomenti::after{
+        display: none;
+    }
+
+    .cellaTesto{
+        width: 100%;
+    }
+
+    .cellaData::after{
+        display: none;
+    }
+    
+    .cellaArgomento:not(.cellaArgomento:has(.cellaTesto)){
+        text-align: left;   
+    }
+
+    #home{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding-right: .5rem;
+        padding-bottom: 1rem;
+    }
+
+    .cartaMenu{
+        min-width: 50%;
+    }
+
+    #comunicazioniDocente .flex-row.comunicazione{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .comunicazione .titoloGrigio{
+        text-align: center;
+        order: 3 !important;
+    }
+
+    .comunicazione > span:nth-last-of-type(2){
+        display: none;
+    }
+
+    .comunicazione > span:nth-child(3){
+        width: 100%;
+        text-align: center;
+        font-size: .8rem !important;
+        overflow: visible;
+        height: 0;
+        transform: translateY(-1rem);
+    }
+
+    #cntComunicazioni > div.label{
+        font-size: .9rem;
+    }
+
+    .compitoVuoto{
+        min-width: initial;
+        width: 100%;
+    }
+}
+
+@media screen and (max-aspect-ratio: 1.2/2){
+    #contTitolo h2{
+        margin-top: .5rem;
+        font-size: 1.7rem;
+    }
+
+    #contCompitiProgramma > div:nth-child(1) > div{
+        gap: 1rem !important;
+    }
+
+   html #cntLogin{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+   }
+
+   #cntLogin #contRegistro{
+        margin-left: 0;
+        width: 100%;
+   }
+
+   #contRegistro{
+        padding: 1rem 1rem 0rem 1rem;
+    }
+
+    #contCompitiProgramma > div:nth-child(1) > div{
+        flex-flow: column nowrap !important;
+    }
+
+    .contCompiti{
+        height: auto !important;
+    }
+
+    .compito{
+        width: 100% !important;
+    }
+
+    #contCompitiProgramma{
+        height: fit-content;
+    }
+
+    #divHome > div.flex-col{
+        overflow-y: visible !important;
+        width: 100%;
+    }
+
+    .barraLaterale #btnMenu{
+        margin-bottom: 0;
+        padding: 1rem;
+        margin: .5rem;
+    }
+
+    #btnMenu ion-icon{
+        transform: scale(1.5);
+    }
+
+    .barraLaterale{
+        width: 100%;
+        height: 4rem;
+        border-radius: 0 0 1rem 1rem;
+        padding: 0;
+        overflow-y: hidden;
+   }
+
+   .barraLaterale > div{
+        padding: 1rem;
+        width: 100%;
+   }
+
+   #divTitolo{
+        display: none;
+   }
+
+   .barraLaterale > span div{
+        display: flex;
+        transform: translateX(-1.5rem);
+    }
+
+    #divVoti > .flex-row,
+    #docenteValutazioni {
+        padding-bottom: 1rem;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    #divAndamento > div:nth-child(2),
+    #contArgomenti{
+        margin-bottom: 1rem;
+    }
+
+    #contRegistro .pseudoSelect{
+        width: 100%;
+    }
+
+    #divAndamento{
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding-right: .5rem;
+    }
+
+    #divVoti > div.pseudoSelect.flex-col{
+        padding-right: 1rem;
+    }
+
+    #docenteValutazioni > div.flex-row{
+        flex-direction: column;
+    }
+
+    #docenteValutazioni  #selectClassi, 
+    #docenteValutazioni > div > .flex-col,
+    #docenteValutazioni > div.flex-row,
+    #selectClassi,
+    #docenteAssenze > div.flex-row,
+    #docenteAssenze > div.flex-row > div,
+    #docenteArgomenti > div:nth-child(1){
+        width: 100% !important;
+    }
+
+    #contTabellaVoti{
+        height: 35rem;
+    }
+
+    #divArgomenti > span{
+        flex-flow: row wrap;
+        gap: .75rem !important;
+        width: 100%;
+    }
+
+    #divArgomenti > span > span:nth-child(3){
+        width: 100%;
+        text-align: center;
+    }
+
+    #contTabellaAssenze,
+    #tabellaAssenze{
+        height: auto;
+    }
+
+    .compitoVuoto{
+        padding-block: 2rem;
+    }
+
+    #home h3{
+        height: 1rem;
+    }
+}
+
+@media (max-height: 1050px){
+    html.hydrated{
+        font-size: 17px;
+    }
+}
+
+@media (max-height: 700px){
+    html.hydrated{
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,197 @@
+#cntLogin{
+    --largCntCarte: 40vw;
+    --largCntLogin: 50vw;
+}
+
+.cntCarte{
+    --rotazione: 14deg;
+}
+
+@media (max-aspect-ratio: 2.4/2){
+
+    #cntLogin{
+        --largCntCarte: 50vw;
+        --largCntLogin: 40vw;
+    }
+
+    .cntCarte .carta{
+        transform: translateX(10vw);
+    }
+}
+
+@media (max-aspect-ratio: 2.2/2) and (min-width: 800px){
+    
+    #cntLogin{
+        --largCntCarte: 55vw;
+        --largCntLogin: 35vw;
+    }
+   
+    #sezioneCarte .cntCarte{
+        --rotazione: 10deg;
+        width: 150%;
+    }
+
+    .cntCarte .carta{
+        width: 100%;
+        transform: translateX(15vw);
+    } 
+}
+
+@media (max-aspect-ratio: 1.96/2){
+    
+    .cntCarte{
+        --rotazione: 8deg;
+    }
+
+    #cntLogin{
+        --largCntCarte: 45vw;
+        --largCntLogin: 45vw;
+    }
+
+    .cntCarte .carta{
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    #sezioneCarte .cntCarte{
+        width: 120%;
+    }
+
+    .cntCarte .colonnaCarte:last-of-type{
+        display: none;
+    }
+}
+
+@media (max-aspect-ratio: 1.7/2){
+
+
+    .cntCarte .carta{
+        width: 100%;
+        transform: translateX(5vw);
+    }
+}
+
+@media (max-aspect-ratio: 1.6/2){
+
+    :root{
+        --altezzaImg: 50%;
+    }
+
+    #cntLogin{
+        --largCntLogin: 90vw;
+    }
+
+    #cntLogin #sezioneCarte{
+        display: none;
+    }
+
+    #root #sezioneLogin{
+        border-radius: 1rem;
+    }
+
+    #contForm > .flex-col{
+        width: calc( 100% - 4rem );
+        margin: 0;
+        margin-top: auto;
+        padding-block: 0;
+        height: calc( 100% - var(--altezzaImg) - 3rem);
+        overflow: hidden;
+    }
+
+    #contForm > .flex-col{
+        margin-bottom: 2rem;
+    }
+
+    #sezioneLogin #mobileImg{
+        display: block ;
+        height: var(--altezzaImg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translateY(3vh);
+        filter: hue-rotate(8deg) saturate(0.78) brightness(1.01);
+        box-shadow: inset 0px 0px 5rem #dbe2f4, 
+                    inset 0px 0px 5rem #dbe2f4,
+                    inset 0px 0px 5rem #dbe2f4, 
+                    inset 0px 0px 5rem #dbe2f4;
+        opacity: 0.9;
+        border-radius: 1rem;
+        min-width: 27rem;
+        background-color: transparent;
+        background-position-x: center;
+    }
+
+    #sezioneLogin{
+        overflow-x: hidden;
+    }
+
+    .flex-col .labelLogin{
+        width: 100%;
+    }
+
+    #contForm > .flex-col{
+        width: 100%;
+    }
+
+    html #cntLogin{
+        height: 87.5vh;
+    }
+
+    #schermata_0 > div.flex-row, #schermata_1 > span:last-of-type{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+}
+
+@media (max-aspect-ratio: 1.1/2){
+    
+    :root{
+        --altezzaImg: 40%;
+    }
+
+    #schermata_1 > span:last-of-type{
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-aspect-ratio: 0.95/2){
+    :root{
+        --altezzaImg: 40%;
+    }
+
+    .wrapperInput{
+        height: 2.5rem !important;
+    }
+
+    .wrapperInput input{
+        width: 30vw;
+    }
+
+    .flex-col #btnAccedi{
+        width: 50vw;
+    }
+
+    #contForm button{
+        height: 2.5rem;
+    }
+
+    #contForm button:has(ion-icon){
+        padding: 0.5rem;
+    }
+
+    #contLogin #contForm{
+        padding-inline: 1rem;
+    }
+}
+ 
+@media (max-height: 1050px){
+    html.hydrated{
+        font-size: 18px;
+    }
+}
+
+@media (max-height: 700px){
+    html.hydrated{
+        font-size: 12px;
+    }
+}

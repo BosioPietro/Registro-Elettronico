@@ -1,0 +1,1576 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    caret-color: transparent;
+}
+
+html{
+    font-size: 23px;
+    transition: filter 0.5s ease;
+    accent-color: #6c8cff;
+}
+
+.prof{
+    filter: hue-rotate(-20deg);
+}
+
+::selection {
+    background: #6c8cffd8;
+    color: #fafbff;
+}
+
+html.hydrated{
+    display: initial;
+}
+
+::-webkit-scrollbar {
+    height: .5rem;
+    width: .5rem;
+    clip-path: polygon(0% 10%, 100% 10%, 100% 90%, 0% 90%);
+}
+  
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 1rem;
+    width: 1px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #fafbff;
+    border-radius: 1rem;
+    width: 1px;
+}
+
+.container{
+    min-height: 100svh;
+    min-width: 100svw;
+    position: relative;
+    background-color: #f0f3fe;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    place-items: center;
+    position: fixed;
+}
+
+.container {
+    background: linear-gradient(270deg, #c2e3f0, #7799ff6f ,#d9e7f3);
+    background-size: 400% 400%;
+    -webkit-animation: giraGradient 30s ease infinite;
+    -moz-animation: giraGradient 30s ease infinite;
+    animation: giraGradient 30s ease infinite;
+}
+
+@-webkit-keyframes giraGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@-moz-keyframes giraGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@keyframes giraGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+
+    color: #ffffffdd;
+}
+
+#backdrop{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+    z-index: -1;
+}
+  
+
+#cntLogin{
+    height: 90vh;
+    z-index: 2;
+    filter: drop-shadow(0px 2rem 3rem #0000003f);
+    border-radius: 1rem;
+    position: relative;
+    width: 90vw;
+    overflow: hidden;
+    background: #e1e7fae7;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    gap: 2rem;
+    justify-content: flex-start;
+}
+
+.flex-row, .flex-col{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+.barraLaterale{
+    height: 100%;
+    justify-content: flex-start;
+    align-items: stretch;
+    z-index: 1;
+    padding: 2rem 0rem 2rem 2rem;
+    transition: all 0.5s ease;
+}
+
+#contRegistro{
+    flex-grow: 1;
+    z-index: 0;
+    padding: 2rem 2rem 2rem 0rem;
+    transition: all 0.5s ease;
+}
+
+#classeUtente{
+    font-size: .7rem;
+    color: #00000074;
+}
+
+#contRegistro, #divHome{
+    height: 100%;
+    justify-content: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    filter: drop-shadow(0px 0rem 3rem #0000000d);
+}
+
+#divHome{
+    border-radius: 1rem;
+    padding-right: 1rem;
+}
+
+img{
+    height: 3rem;
+    aspect-ratio: 1/1;
+}
+
+#divTitolo{
+    margin-bottom: 2rem;
+}
+
+.barraLaterale button{
+    height: 3rem;
+    background-color: #fafbff;
+    border-radius: 1rem;
+    color: #6c8cff;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+button:hover,
+#comunicazioniDocente .btnAggiungiArg:hover{
+    filter: brightness(1.1) drop-shadow(0px 0px 0.5rem #6c8cff);
+}
+
+#btnEsci{
+    margin-top: auto;
+    font-size: 1.7rem;
+}
+
+ion-icon[name="log-out"]{
+    transform: rotateY(.5turn);
+}
+
+#contData, .cellaData, .hl,
+#docenteValutazioni .option,
+#docenteAssenze .option,
+#docenteAssenze .testoSelect,
+#docenteValutazioni .testoSelect{
+    text-transform: capitalize;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#contTitolo h2{
+    font-weight: bold;
+    color: #fafbff;
+    text-transform: capitalize;
+}
+
+#contTitolo{
+    justify-content: space-between;
+    width: 100%;
+    color: #79809c;
+    filter: drop-shadow(0px 0px 0.5rem #79809ca8);
+}
+
+.userImg{
+    border-radius: 1rem;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.label{
+    font-size: 0.7rem;
+    color: #79809c;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.user{
+    gap: 1rem;
+    text-transform: capitalize;
+}
+
+.user span{
+    text-align: right;
+    width: 100%;
+}
+
+.pagina{
+    flex-grow: 1;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+#contCompitiProgramma{
+    flex-grow: 1;
+    width: 100%;
+    justify-content: left;
+    align-items: stretch;
+    height: 31.5rem;
+    gap: 2rem;
+}
+
+.contCompiti{
+    flex-grow: 1;
+}
+
+.carta{
+    min-height: 8rem;
+    width: 20rem;
+    background-color: #fafbff;
+    border-radius: 1rem;
+    z-index: 3;
+    padding: 2rem;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+    flex-grow: 1;
+}
+
+.compito, .cellaTesto{
+    flex-grow: 1;
+}
+
+.compito h2{
+    font-size: 1.5rem;
+}
+
+h2{
+    margin-left: .5rem;
+}
+
+.contVoti{
+    width: 100%;
+    gap: 2rem;
+    flex-wrap: wrap;
+    height: 8rem;
+    justify-content: left;
+    overflow: hidden;
+}
+
+.vuoto{
+    color: transparent;
+}
+
+.abilitato{
+    color: #6c8cff !important;
+}
+
+.user span:not(.label){
+    color: #000;
+}
+
+#btnMenu{
+    margin-bottom: 0;
+    height: 0;
+    width: 15rem;
+    box-shadow: 0 0 1rem #0000001a;
+}
+
+ion-icon[name="menu-outline"]{
+    font-size: 2rem;
+}
+
+.barraLaterale > div{
+    height: 100%;
+}
+
+#contOpzioni, #contArgomenti{
+    width: 100%;
+    flex-grow: 1;
+    position: relative;
+}
+
+#contOpzioni .user{
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    flex-direction: row-reverse;
+    display: none;
+}
+
+#contOpzioni .user .flex-col{
+    flex-grow: 1;
+}
+
+#contOpzioni .user span, .swal-titolo{
+    text-align: left;
+    white-space: nowrap;
+    font-family: inherit;
+}
+
+.nascosto{
+    display: none;
+}
+
+.titolo{
+    margin-left: 0.5rem;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(#79809ca8 0px 0px 0.5rem);
+}
+
+#divComunicazioni{
+    padding-top: 0;
+    margin-top: 2rem;
+    padding: 0 1rem 1rem 0;
+    overflow-y: scroll;
+    justify-content: left;
+    filter: drop-shadow(0px 0rem 2rem #00000012);
+    border-radius: 1rem;
+}
+
+#divArgomenti, #divAnagrafico, #docenteArgomenti{
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#divArgomenti h2,
+#infoWrapper > div > span:nth-child(1),
+#docenteValutazioni h2,
+#docenteArgomenti h2,
+#docenteAssenze h2:not(.titoloGrigio){
+    color: #fafbff;
+    filter: drop-shadow(0px 0px 0.5rem #00000052);
+    margin: 0;
+    text-align: center;
+}
+
+.hl{
+    background-color: #fafbff;
+    padding-block: .25rem;
+    padding-inline: 1rem;
+    border-radius: .5rem;
+    color: #6c8cff;
+    font-weight: 500;
+}
+
+.btnData{
+    aspect-ratio: 1/1;
+    padding: .4rem;
+    border-radius: .5rem;
+    background-color: #6c8cff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btnData ion-icon{
+    font-size: 1rem;
+    color: #fafbff;
+}
+
+#contArgomenti{
+    padding-right: .5rem;
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    overflow: auto;
+    justify-content: start;
+}
+
+#contArgomenti > .rigaArgomenti:first-of-type{
+    padding-top: 1rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+#contArgomenti > .rigaArgomenti:last-of-type{
+    padding-bottom: 1rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.rigaArgomenti{
+    flex-grow: 1;
+    width: 100%;
+    position: relative;
+    background-color: #fafbff9a;
+    padding-inline: 1rem;
+}
+
+.cellaData{
+    font-weight: 500;
+    height: 100%;
+    min-width: 20ch;
+    color: #79809c;
+    position: relative;
+}
+
+.rigaArgomenti:not(:last-of-type)::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(90deg, #00000000, #00000052 15%, #00000052 85%, #00000000);
+    bottom: 0;
+    border-radius: 100vh;
+}
+
+.materiaHl{
+    color: #fafbff;
+    font-weight: 500;
+    background-color: #6c8cff;
+    padding-inline: 1rem;
+    padding-block: .1rem;
+    border-radius: .5rem;
+    margin-right: .5rem;
+}
+
+.cellaArgomento:not(:first-of-type){
+    margin-top: .5rem;
+}
+
+.argomento{
+    font-size: .8rem;
+    color: #79809c;
+}
+
+.cellaTesto{
+    padding-block: 1rem;
+    color: #79809c;
+}
+
+.assenza{
+    width: calc(50% - 1rem);
+    flex-grow: 1;
+    min-height: 12rem;
+    background-image: linear-gradient(45deg, #e25252, #fbb7ba);
+    border-radius: 1rem;
+}
+
+.assenza h2{
+    margin-left: 0;
+}
+
+.assenza *{
+    color: #fafbff;
+}
+
+.hlAssenza, .assenza button{
+    background-color: #fafbff;
+    color: #fd5052;
+    font-weight: 500;
+    padding-block: .25rem;
+    padding-inline: 1rem;
+    border-radius: .5rem;
+}
+
+h3{
+    font-weight: 500;
+}
+
+.assenza *:not(button){
+    align-self: flex-start;
+}
+
+.assenza button{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.assenza:not(.giustificato) button:hover{
+    filter: brightness(1.2) drop-shadow(0px 0px 1rem #FFFFFF52);
+}
+
+.assenza.giustificato button{
+    pointer-events: none;
+    background-color: transparent;
+    color: #fafbff;
+    text-shadow: 0 0 1rem hsl(158, 71%, 36%);
+}
+
+.assenza > .flex-col{
+    width : 100%; 
+    flex-grow : 1;
+    justify-content: space-between;
+}
+
+#divAssenze{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-grow: 0;
+    overflow-y: auto;
+    padding-right: .5rem;
+}
+
+.barraLaterale > span,
+#assenzeStudente .flex-row,
+#comunicazioniDocente .flex-row{
+    justify-content: space-between;
+}
+
+.barraLaterale > span div{
+    display: none;
+}
+
+.nonCollassato, .collassato{
+    transition: all 0.5s ease;
+}
+
+button.collassato{
+    width: 3rem !important;
+}
+
+div.collassato{
+    width: 0 !important;
+}
+
+.nonCollassato{
+    width: 15rem !important;
+    overflow: visible !important;
+}
+
+.collassatoMobile{
+    height: 4rem !important;
+}
+
+.nonCollassatoMobile{
+    height: 100svh !important;
+}
+
+#divVoti, #divAndamento{
+    gap: 0;
+    padding-left: .5rem;
+    overflow-y: auto;
+    justify-content: flex-start;
+}
+
+#divVoti > .pseudoSelect, #divArgomenti > .pseudoSelect{
+    width: 20rem;
+}
+
+#divVoti > .flex-row{
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    gap: 2rem;
+    overflow-y: scroll;
+    padding-right: .5rem;
+    z-index: 0;
+}
+
+#divVoti .carta{
+    margin: 0;
+}
+
+#contRegistro:has(#divVoti:not(.nascosto)){
+    overflow-x: visible;
+}
+
+#contRegistro:has(#divAndamento:not(.nascosto)){
+    overflow: visible;
+}
+
+.opzione ion-icon[name="person-circle"]{
+    transform: scale(1.15);
+}
+
+.swal{
+    border-radius: 1rem;
+    font-family: inherit;
+    display: flex !important;
+    flex-direction: column;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.swal-titolo{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+    font-family: inherit;
+    white-space: initial;
+}
+
+.swal2-confirm.swalConferma{
+    color: #fafbff;
+    background-color: #6c8cff;
+    height: 3rem;
+    width: calc(50% - .5rem);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    margin: 0 .5rem 0 0;
+}
+
+.swalConferma::before{
+    content: '';
+    background-image: url(../../assets/checkmark.svg);
+    height: 70%;
+    aspect-ratio: 1/1;
+    color: #fafbff;
+    position: absolute;
+    top: calc(50% - 35%);
+    filter: invert(1);
+    left: 45%;
+}
+
+.swal2-cancel.swalAnnulla{
+    color: #fafbff;
+    background-color: #e12d3a;
+    height: 3rem;
+    width: calc(50% - .5rem);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    margin: 0 0 0 .5rem;
+    cursor: pointer;
+}
+
+.swal2-cancel.swalAnnulla:hover{
+    filter: brightness(1.2) drop-shadow(0px 0px .5rem #e12d39c0);
+}
+
+.swalAnnulla:not(.flex-col)::before{
+    content: '';
+    background-image: url(../../assets/x.svg);
+    height: 70%;
+    aspect-ratio: 1/1;
+    color: #fafbff;
+    position: absolute;
+    top: calc(50% - 35%);
+    filter: invert(1);
+    background-size: cover;
+    left: 42%;
+}
+
+
+.swal-input{
+    margin: 0;
+    border-radius: .5rem;
+    caret-color: #6c8cff;
+}
+
+.wrapperBottoneSwal{
+    margin: 1rem 0 0 0;
+}
+
+#infoWrapper{
+    width: 100%;
+    gap: 2rem;
+    justify-content: flex-start;
+    margin-left: .5rem;
+}
+
+#infoWrapper img{
+    object-fit: cover;
+    height: 5rem;
+    border-radius: 1rem;
+    aspect-ratio: 1/1;
+}
+
+#infoWrapper > .flex-col{
+    align-items: flex-start;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#infoWrapper .label{
+    font-size: 1rem;
+}
+
+#contInfo, #assenzeStudente{
+    width: 100%;
+    background-color: #fafbff;
+    border-radius: 1rem;
+    padding: 2rem;
+    align-items: flex-start;
+}
+
+.titoloInfo{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-left: .25rem;
+}
+
+.infoHl, #divAnagrafico button{
+    background-color: hsl(228, 100%, 90%);
+    padding-inline: 1rem;
+    padding-block: .5rem;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+
+#divAndamento, #docenteValutazioni, #docenteAssenze{
+    overflow: visible;
+    gap: 2rem;
+    justify-content: flex-start;
+}
+
+#divAndamento > div > .flex-row:not(.pseudoSelect){
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#divAndamento .pseudoSelect,
+#docenteValutazioni .pseudoSelect,
+#docenteAssenze .pseudoSelect{
+    margin-top: .5rem;
+    width: 20rem;
+}
+
+.cartaGrafico{
+    height: 10rem;
+    flex-grow: 1;
+    background-color: #fafbff;
+    border-radius: 1rem;
+    padding: 2rem;
+    filter: drop-shadow(0px 0px 1rem #00000021);
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.cartaGrafico h2{
+    font-size: 1.2rem;
+    padding-right: 2rem;
+    text-align: center;
+}
+
+.cartaGrafico.grande{
+    width: 100%;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#divAndamento > div:nth-child(2){
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cartaGrafico.suff{
+    color: #22cb8e;
+}
+
+.cartaGrafico.insuff{
+    color: #e12d3a;
+}
+
+.numeroVoto{
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.giorno{
+    position: relative;
+}
+
+.programmato::after{
+    content: '';
+    position: absolute;
+    height: .5rem;
+    top: .1rem;
+    aspect-ratio: 1/1;
+    border-radius: 100vh;
+    background-color: #6c8cffac;
+}
+
+#noDati{
+    display: none;
+    width: 100%;
+}
+
+#canvasGrafico{
+    height: 100%;
+    width: 100%;
+}
+
+#docenteValutazioni,
+#docenteArgomenti,
+#divArgomenti,
+#docenteAssenze{
+    padding-left: .5rem;
+}
+
+#docenteValutazioni > div > .flex-col,
+#docenteArgomenti > .flex-col,
+#docenteAssenze > div > .flex-col{
+    align-items: flex-start;
+}
+
+#selectClassi{
+    z-index: 2;
+}
+
+#selectStudenti{
+    z-index: 0;
+}
+
+.selectCollassato{
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.selectCollassato .pseudoSelect{
+    pointer-events: none;
+}
+
+.selectCollassato .pseudoSelect{
+    transition: all 0.5s ease;
+}
+
+.selectCollassato .selectBody{
+    background-color: transparent;
+    padding-left: .1rem;
+}
+
+.selectCollassato ion-icon, .selectCollassato .selectDesc{
+    opacity: 0;
+}
+
+.selectCollassato .testoSelect{
+    transition: all 0.5s ease;
+    font-weight: 500;
+    color: #79809c9a;
+    font-size: 2rem;
+    filter: drop-shadow(0px 0px 1rem #0000003e);
+}
+
+#contTabellaVoti,
+#tabellaVoti,
+#docenteArgomenti > div:nth-child(3),
+#contTabellaAssenze,
+#tabellaAssenze{
+    width: 100%;
+    flex-grow: 1;
+}
+
+#contTabellaVoti,
+#wrapperArgomenti,
+#contTabellaAssenze{
+    max-height: 0;
+    overflow: hidden;
+}
+
+#tabellaVoti, #tabellaAssenze{
+    background-color: #fafbff;
+    border-radius: 1rem;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    gap: 1rem;
+    height: 35.2rem;
+    overflow-y: auto;
+    margin-right: .5rem;
+}
+
+#tabellaVoti > .flex-row,
+#tabellaAssenze > .flex-row{
+    justify-content: left;
+    margin-block: .5rem;
+    flex-wrap: wrap;
+}
+
+.cellaTitolo{
+    min-width: 20ch;
+    margin-right: 1rem;
+    color: #79809c;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.votoTabella, .btnAggiungiVoto{
+    margin-right: .5rem;
+    aspect-ratio: 1/1;
+    height: 3rem;
+    color: #fafbff;
+    border-radius: .5rem;
+    font-weight: 500;
+    text-shadow: 0 0 1rem #0000003e;
+    cursor: pointer;
+}
+  
+#tabellaVoti::-webkit-scrollbar-thumb,
+#tabellaAssenze::-webkit-scrollbar-thumb,
+#assenzeStudente > div::-webkit-scrollbar-thumb{
+    background: #6c8cff;
+    border-top: 2rem solid transparent;
+    border-bottom: 3rem solid transparent;
+    background-clip: padding-box;
+}
+
+.noVotoTabella{
+    color: #79809ca1;
+    padding-block: .5rem;
+}
+
+.btnAggiungiVoto{
+    background-color: transparent;
+    font-size: 2rem;
+    color: #79809ca1;
+    transition: all 0.3s ease;
+}
+
+.swal2-html-container .flex-col,
+#assenzeStudnte,
+#assenzeStudente .flex-row,
+#assenzeStudente .flex-col,
+#comunicazioniDocente .flex-col,
+#comunicazioniDocente .flex-row:not(.pseudoSelect .flex-row){
+    align-items: start;
+    width: 100%;
+}
+
+.swal2-html-container > .flex-col{
+    gap: 1rem;
+}
+
+.swal2-html-container{
+    overflow: visible;
+} 
+
+.swal2-html-container .label{
+    margin-left: .25rem;
+    font-size: 1rem;
+}
+.swal-input{
+    width: 100%;
+    padding: .5rem;
+    border-radius: .5rem;
+    font-size: 1rem;
+    border:0;
+    border: 2px solid;
+    border-color: #79809c;
+    transition: all 0.3s ease;
+    outline: 4px solid transparent;
+    font-family: inherit;
+}
+
+.swal-input:focus{
+    outline: 4px solid #6c8cff55;
+    border-color: #6c8cff;
+}
+
+.swal2-toast{
+    border-radius: .5rem;
+    background: #dce2f6 !important;
+    backdrop-filter: blur( 0.5rem );
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+  
+.swal2-toast .swal2-title{
+    color: #79809c;
+    filter: drop-shadow(0px 0px 1rem #00000089);
+}
+
+.swal2-toast .swal2-timer-progress-bar{
+    background-color: #6c8cff;
+}
+
+.swal2-toast .swal2-icon.swal2-error{
+    color: #6c8cff;
+    border-color: #6c8cff;
+}
+
+.swal2-toast .swal2-x-mark > span{
+    background-color: #6c8cff !important;
+}
+
+.swal2-icon.swal2-success [class^=swal2-success-line]{
+    background-color: #6c8cff;
+}
+
+.swal2-icon.swal2-success .swal2-success-ring {
+    border: .25em solid #6c8cff;
+}
+
+#docenteArgomenti > .flex-col:not(#wrapperArgomenti){
+    width: 20rem;
+}
+
+#wrapperBottoniData{
+    overflow: hidden;
+    max-width: 0;
+    margin-bottom: 1rem;
+}
+
+#wrapperArgomenti,
+#contTabellaVoti,
+#contTabellaAssenze{
+    justify-content: flex-start;
+    border-radius: 1rem;
+}
+
+#docenteArgomenti{
+    gap: 0;
+    margin-top: 1rem;
+}
+
+.btnAggiungiArg{
+    color: #fafbff;
+    background-color: #79809c6f;
+    padding: .5rem;
+    border-radius: .5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 10rem;
+    margin-left: 1rem;
+}
+
+.btnAggiungiArg:not(.solo){
+    margin-top: .5rem;
+}
+
+.btnAggiungiArg ion-icon{
+    transform: scale(2);
+}
+
+.btnAggiungiArg:hover,
+#assenzeStudente .btnAggiungiAssenza:hover{
+    filter: brightness(1.2) drop-shadow(0px 0px 1rem #79809c85);
+}
+
+textarea{
+    resize: vertical;
+    min-height: 10rem;
+    text-align: justify;
+}
+
+.swal2-html-container .selectBody{
+    border-color: #79809c;
+    border-radius: .5rem;
+}
+
+.swal2-html-container .selectBody:focus{
+    border-color: #6c8cff;
+}
+
+.swal2-html-container{
+    z-index: 2;
+}
+
+.wrapperBottoneSwal{
+    z-index: 1;
+}
+
+.errore{
+    text-align: center;
+    font-size: .75rem;
+    color: #fd4344;
+    margin-inline: auto;
+    height: 0;
+    overflow: visible;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+input[type="date"]{
+    cursor: pointer;
+}
+
+.swalAnnulla.flex-col{
+    align-items: center;
+    margin: 0;
+}
+
+.swalAnnulla ion-icon{
+    transform: scale(2);
+}
+
+.materiaHl ion-icon{
+    transform: translateY(.1rem);
+}
+
+#wrapperArgomenti .materiaHl{
+    padding-inline: .75rem;
+    cursor: pointer;
+}
+
+.cellaArgomento,
+#comunicazioniDocente{
+    padding-left: 1rem;
+
+}
+
+#divArgomenti{
+    padding-top: .5rem
+}
+
+.cellaTesto.materia{
+    padding: 1rem;
+}
+
+.cellaData::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    right: 0;
+    width: 1px;
+    background: #79809c;
+}
+
+#contArgomenti > .rigaArgomenti:last-child .cellaData::after{
+    background: linear-gradient(to bottom, #79809c, #79809c00);
+}
+
+#contArgomenti > .rigaArgomenti:first-child .cellaData::after{
+    background: linear-gradient(to bottom, #79809c00, #79809c);
+}
+
+.giustificato{
+    background-image: linear-gradient(45deg, #4dd3a2, hsl(158, 71%, 86%));
+}
+
+.giustificato .hlAssenza{
+    color: #22cb8e;
+}
+
+.swal2-popup{
+    background: #fafbff;
+}
+
+.swal2-popup:has(#passGiustifica) .wrapperBottoneSwal{
+    margin-top: 0;
+}
+
+button:disabled{
+    pointer-events: none;
+}
+
+input[type=number] { 
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0; 
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+}
+
+
+
+#tabellaAssenze .cellaTitolo{
+    margin-right: 2rem;
+    transition: all 0.5s ease;
+    min-width: initial;
+}
+
+.hlDocAssenza, .assente  .hlDocAssenza{
+    padding-block: .5rem;
+    padding-inline: 1rem;
+    border-radius: .5rem;
+    background-color: #fd5052;
+    color: #fafbff;
+    font-weight: 500;
+    width: 3rem;
+    transition: all 0.5s ease;
+    height: 100%;
+    margin-inline: auto;
+    cursor: pointer;
+}
+
+.hlDocAssenza:hover,
+.colonnaNG td:hover:not(:has(button)){
+    filter: brightness(1.2) drop-shadow(0px 0px .75rem #fd5052);
+}
+
+.hlDocAssenza:not(.haAssenze):hover,
+.colonnaG td:not(:has(button)):hover{
+    filter: brightness(1.1) drop-shadow(0px 0px .75rem #4dd3a2);
+}
+
+.hlDocAssenza:not(.haAssenze){
+    font-weight: normal;
+    background-color: #4dd3a2;
+}
+
+.assente .cellaTitolo{
+    color: hsl(0, 98%, 60%);
+}
+
+#docenteAssenze{
+    gap: 0;
+}
+
+#tabellaAssenze{
+    height: 37.3rem;
+    padding: 0;
+}
+
+.titoloGrigio{
+    color: #79809c !important;
+    font-weight: 500;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+th{
+    margin-inline: 1rem;
+    text-align: left;
+    font-size: 1.5rem;
+    color: #79809c;
+    font-weight: 500;
+
+}
+
+th:not(th:last-of-type){
+    padding-right: 2rem;
+}
+
+td{
+    padding-top: .5rem;
+}
+
+table{
+    margin: 2rem;
+}
+
+#assenzeStudente{
+    padding: 0;
+}
+
+#assenzeStudente{
+    height: 0;
+    position: relative;
+}
+
+#assenzeStudente button,
+#comunicazioniDocente button:not(.btnAggiungiArg){
+    font-size: 1.5rem;
+    color: #6c8cff;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#assenzeStudente button ion-icon,
+#comunicazioniDocente button ion-icon{
+    transition: all 0.3s ease;
+}
+
+#assenzeStudente > div > div.flex-row{
+    position: absolute;
+    top: 0;
+    padding-top: 1rem;
+    width: calc(100% - 4rem);
+    align-items: center;
+    background-color: #fafbff;
+    z-index: 2;
+}
+
+#assenzeStudente > div,
+#comunicazioniDocente{
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#assenzeStudente table{
+    margin: 0;
+}
+
+.collassaTabella{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.collassaTabella td:not(:has(button)),
+#assenzeStudente .btnAggiungiAssenza{
+    background-color: #e12d3a;
+    color: #fafbff;
+    padding-inline: 1rem;
+    border-radius: .5rem;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    padding-block: .5rem;
+    cursor: pointer;
+}
+
+.collassaTabella table{
+    border-collapse: separate; 
+    border-spacing: 0 1rem;
+}
+
+.collassaTabella ion-icon{
+    transform: scale(1.1) translateY(.05rem);
+}
+
+.colonnaG td:not(:has(button)){
+    background-color: #4dd3a2;
+    color: #fafbff;
+}
+
+#assenzeStudente .btnAggiungiAssenza{
+    width: 100%;
+    color: #fafbff;
+    background-color: #79809c;
+    justify-content: center;
+}
+
+.cartaMenu{
+    min-height: 12rem;
+    min-width: 40%;
+    flex-grow: 1;
+    background-color: #79809c;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    isolation: isolate;
+    align-items: flex-end;
+    transition: all 0.5s ease;
+    padding: 3rem;
+}
+
+.cartaMenu p{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+#home h3{
+    margin-left: .5rem;
+    text-align: left;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 1rem;
+    filter: drop-shadow(0px 0px .75rem #79809c);
+    margin-top: 1rem;
+    overflow: visible;
+}
+
+#home > .flex-row{
+    width: 100%;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+#home{
+    justify-content: flex-start;
+    color: #fafbff;
+    margin-top: 0;
+}
+
+#contRegistro:has(#home:not(.nascosto)){
+    overflow: visible;
+}
+
+.cartaMenu ion-icon{
+    position: absolute;
+    font-size: 10rem;
+    mix-blend-mode: soft-light;
+    top: calc(50% - 5rem);
+    left: -5rem;
+    transition: all 0.5s ease;
+}
+
+.cartaMenu:hover{
+    transform: scale(1.02);
+    background: #6c8cff;
+
+}
+
+.cartaMenu:hover ion-icon{
+    transform: scale(1.1) translateX(5rem) rotate(10deg);
+}
+
+/* body:has(#home:not(.nascosto)) .barraLaterale{
+    width: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+body:has(#home:not(.nascosto)) #contRegistro{
+    margin-left: 2rem;
+}
+
+body:has(#home:not(.nascosto)) #cntLogin{
+    gap: 0;
+} */
+
+#home p{
+	overflow: visible;
+    position: relative;
+    mix-blend-mode: soft-light;
+    transition: all 0.5s ease;
+}
+
+#home p::after {
+    content: '';
+    background-color: #fff;
+    width: 0%;
+    height: .25rem;
+    position: absolute;
+	opacity: 1;
+    border-radius: 100vh;
+    left: 0;
+    transition: all 0.5s ease;
+    bottom: -.25rem;
+}
+
+.cartaMenu:hover p{
+    transform: scale(1.1);
+}
+
+.cartaMenu:hover p::after,
+#comunicazioniDocente .collassaTabella{
+    width: 100% !important;
+}
+
+#comunicazioniDocente .label{
+    font-size: 1.2rem;
+    margin-left: .25rem;
+}
+
+#comunicazioniDocente .selectBody{
+    border: 2px solid #79809c;
+    border-radius: .5rem;
+}
+
+#comunicazioniDocente .btnAggiungiArg{
+    align-items: center;
+    margin: 0;
+    padding-block: 1rem;
+    font-size: 1.5rem;
+    background-color: #6c8cff;
+}
+
+#comunicazioniDocente .flex-row.comunicazione{
+    justify-content: left;
+    align-items: center !important;
+    background-color: #fafbff;
+    padding-inline: 1rem;
+    padding-block: .5rem;
+    gap: 1rem;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.comunicazione ion-icon{
+    color: #6c8cff;
+    font-size: 1.1rem;
+}
+
+ion-icon[name="information-circle"]{
+    transform: scale(1.1);
+}
+
+.comStudente{
+    background-color: #fafbff;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.comStudente .label{
+    color: #6c8cff;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.comStudente h3{
+    font-size: 1.7rem;
+}
+
+.testoCom{
+    font-size: 1.1rem;
+}
+
+#divAnagrafico button{
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    margin: 0 .5rem 0 0;
+}
+
+#divAnagrafico button:hover{
+    filter: drop-shadow(0px 0px .7rem #99adffc2);
+}
+
+#divAnagrafico button:has(ion-icon){
+    background-color: #e25252;
+    color:  #fafbff;
+    aspect-ratio: 1/1;
+    height: 100%;
+    padding: 0;
+}
+
+#divAnagrafico button:has(ion-icon):hover{
+    filter: brightness(1.1) drop-shadow(0px 0px .5rem #e25252b5);
+}
+
+.compitoVuoto{
+    min-width: 25rem;
+    height: 100%;
+    border-radius: 1rem;
+    color: #fafbff;
+    background: #79809c4d;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    text-shadow: 0px 0px .75rem #fafbff81;
+}
